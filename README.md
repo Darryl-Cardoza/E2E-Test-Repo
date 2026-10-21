@@ -1,11 +1,11 @@
-# Northstar E2E Tests
+# E2E Tests
 
-Separate Playwright project for the Northstar Auth Dashboard. Tests expect the app at `http://localhost:3000` and API at `http://localhost:5000/api` by default. See `.env.example` for overrides.
+Separate Playwright project for the Auth Dashboard. Tests expect the app at `http://localhost:3000` and API at `http://localhost:5000/api` by default. See `.env.example` for overrides.
 
 ## Requirements
 
 - Node.js 22 or newer
-- The Northstar backend, frontend, and a disposable MongoDB database running locally
+- The backend, frontend, and a disposable MongoDB database running locally
 
 ## Install and run
 
