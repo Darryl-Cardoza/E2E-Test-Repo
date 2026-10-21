@@ -15,6 +15,16 @@ npx playwright install chromium
 npm test
 ```
 
+## Run tests from the local dashboard
+
+Start the dashboard from this repository:
+
+```sh
+npm run dashboard
+```
+
+Open `http://127.0.0.1:4173`, click **Run tests**, and wait for the results. When the run finishes, use **Open HTML report** to inspect the Playwright report. The dashboard reads `.env` for `BASE_URL`, `API_URL`, and route overrides, then passes those settings to Playwright. Keep the terminal running while using the dashboard; it only listens on your own machine.
+
 To run against other URLs, set `BASE_URL` and `API_URL`. If the UI uses different routes, set `REGISTER_PATH`, `LOGIN_PATH`, and `DASHBOARD_PATH`. The UI page objects use accessible labels and buttons; align those locators with the actual frontend if its labels differ.
 
 ## Coverage

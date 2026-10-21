@@ -7,7 +7,8 @@
     "test": "playwright test",
     "test:smoke": "playwright test --project=chromium",
     "test:ui": "playwright test --ui",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "dashboard": "node dashboard/server.js"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",

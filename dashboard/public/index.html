@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#11151d" />
+    <title>E2E Test Runner</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="E2E test runner home"><span class="brand-mark">E</span><span>E2E <b>TEST RUNNER</b></span></a>
+        <span class="local-badge"><i></i> LOCAL RUNNER</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">QUALITY CONTROL / AUTOMATION</p>
+        <h1>Test your app.<br /><span>Know where you stand.</span></h1>
+        <p class="lede">Run the Playwright end-to-end suite against your configured application. Review every result in the generated report.</p>
+      </section>
+
+      <section class="runner card" aria-labelledby="runner-title">
+        <div class="runner-heading">
+          <div>
+            <p class="eyebrow">TEST SESSION</p>
+            <h2 id="runner-title">E2E smoke suite</h2>
+          </div>
+          <span id="status-pill" class="status-pill idle"><i></i><span id="status-text">Ready</span></span>
+        </div>
+        <div class="run-row">
+          <div class="run-copy"><strong>Chromium · Full suite</strong><span>Registration, login, dashboard, and API checks</span></div>
+          <button id="run-button" type="button"><span class="play-icon">▶</span> Run tests</button>
+        </div>
+        <div class="progress-track"><div id="progress-bar"></div></div>
+        <div class="result-row">
+          <span id="run-time">No runs yet</span>
+          <a id="report-link" class="report-link hidden" href="/report/" target="_blank" rel="noopener">Open HTML report <span>↗</span></a>
+        </div>
+        <div class="terminal-wrap">
+          <div class="terminal-title"><span><i></i><i></i><i></i></span><span>PLAYWRIGHT OUTPUT</span><span id="output-count">0 lines</span></div>
+          <pre id="output" aria-live="polite">Waiting for the first run.</pre>
+        </div>
+      </section>
+
+      <footer><span>E2E Test Runner</span><span>Runs locally on this machine</span></footer>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -11,7 +11,9 @@ test('E2E-001: a visitor can register a new account', async ({ page }) => {
   await register.expectFormVisible();
   await register.register('Northstar E2E', email, password);
 
-  await expect(page.getByText(/success|created|welcome|registered/i).first()).toBeVisible();
+  // Northstar completes registration by signing the user in and opening the dashboard.
+  await expect(page).toHaveURL(new RegExp(`${appConfig.dashboardPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[/?#])`));
+  await expect(page.getByText(email).first()).toBeVisible();
 });
 
 test('E2E-002: registering an existing email is rejected', async ({ page, request }) => {
